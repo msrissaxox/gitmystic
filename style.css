@@ -1,0 +1,206 @@
+:root {
+    --mystical-purple: #573b8a;
+    --crystal-blue: #1a1a2e;
+    --ethereal-pink: #ff69b4;
+    --mystic-gold: #ffd700;
+    --aura-white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--crystal-blue), var(--mystical-purple));
+    font-family: 'Philosopher', sans-serif;
+    color: var(--aura-white);
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.crystal-ball {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.mystical-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    background: linear-gradient(45deg, var(--mystic-gold), var(--ethereal-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    animation: floatText 3s ease-in-out infinite;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--aura-white);
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.magical-input {
+    margin: 2rem 0;
+}
+
+input {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--aura-white);
+    border: 2px solid var(--mystic-gold);
+    width: 300px;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 20px var(--mystic-gold);
+}
+
+.crystal-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, var(--mystical-purple), var(--ethereal-pink));
+    color: var(--aura-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.crystal-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.crystal-button:hover::before {
+    animation: glitter 1.5s infinite;
+}
+
+@keyframes glitter {
+    0% { transform: translateX(-50%) rotate(45deg); }
+    100% { transform: translateX(150%) rotate(45deg); }
+}
+
+.loading-crystal {
+    margin: 2rem auto;
+}
+
+.crystal-essence {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: radial-gradient(circle at 30% 30%, var(--aura-white), transparent);
+    border-radius: 50%;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+.reading-section {
+    margin-top: 3rem;
+}
+
+.tarot-spread {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    min-height: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.card h3 {
+    color: var(--mystic-gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.aura-reading, .coding-destiny {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Magical animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reading-section.visible {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 1.5rem; }
+    .tarot-spread { flex-direction: column; align-items: center; }
+    .card { width: 90%; margin: 1rem 0; }
+    input { width: 80%; margin-bottom: 1rem; }
+}

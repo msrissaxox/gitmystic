@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitMystic 🔮 | Code Fortune Teller</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Philosopher:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="crystal-ball">
+        <div class="mystical-container">
+            <h1>GitMystic 🔮</h1>
+            <h2>The Code Fortune Teller</h2>
+            
+            <div class="input-section">
+                <div class="magical-input">
+                    <input type="text" id="githubUsername" placeholder="Enter GitHub Username">
+                    <button onclick="revealDestiny()" class="crystal-button">
+                        <span>Reveal Your Code Destiny</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="loading-crystal hidden">
+                <div class="crystal-essence"></div>
+                <p>🔮 Consulting the digital spirits...</p>
+            </div>
+
+            <div class="reading-section hidden">
+                <div class="tarot-spread">
+                    <div class="card past">
+                        <h3>Your Code Past</h3>
+                        <div class="card-content" id="pastReading"></div>
+                    </div>
+                    <div class="card present">
+                        <h3>Your Code Present</h3>
+                        <div class="card-content" id="presentReading"></div>
+                    </div>
+                    <div class="card future">
+                        <h3>Your Code Future</h3>
+                        <div class="card-content" id="futureReading"></div>
+                    </div>
+                </div>
+                
+                <div class="aura-reading">
+                    <h3>🌟 Your GitHub Aura</h3>
+                    <div id="auraReading"></div>
+                </div>
+                
+                <div class="coding-destiny">
+                    <h3>✨ Mystical Code Metrics</h3>
+                    <div id="destinyMetrics"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
