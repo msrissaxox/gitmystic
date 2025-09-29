@@ -1,4 +1,7 @@
-# gitmystic
+## Live Project
+<a href="https://gitmystic.vercel.app/" target="_blank">Git Mystic</a>
+
+## gitmystic
 This project is a whimsical web application that predicts a developer's "Code Destiny" using their GitHub profile. It combines a visually engaging particle background with a fun, pseudo-mystical interpretation of public GitHub data.
 
 ## Features
